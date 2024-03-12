@@ -42,10 +42,12 @@ def greet_user():
 
         # 2a. and read it back in using json.loads().
         read_content = path_user_dict.read_text()
+        print(f"\nReading file:\n\t{read_content.strip()}\n")
         # 2a.1. Print a summary showing exactly what your program remembers about the user.
-        print(f"Please review them:\n\t")
+        print(f"Please review your details:\n\t")
         for key, value in user_dictionary.items():
-            print(f"{key.title()}: {value}\n")
+            print(f"\t{key.title()}: {value}")
+        print("\n")
 
 
 greet_user()
