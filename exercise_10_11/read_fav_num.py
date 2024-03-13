@@ -12,14 +12,13 @@ from pathlib import Path
 import json
 
 # -----------------------------------------------------------------------------
-# 1b. Write a separate program that reads in this value
 
 path = Path(
     "\PYTHON\My_PYTHON_2024\PYTHON_practice\PCC_exercices_10_11_to_10_14\exercise_10_11\json_files/favorite_numbers.json"
 )
 if path.exists():
-    read_content = path.read_text()
+    read_content = path.read_text()  # 1b.
     saved_fav_num = json.loads(read_content)
-    print(f"\nFetching your favorite number...\n\tHere it is: {saved_fav_num}\n")
-
-# 1b.1. and prints the message “I know your favorite number! It’s _____.”
+    print(
+        f"\nFetching your favorite number...\n\tHere it is: {saved_fav_num}\n"
+    )  # 1b.1.

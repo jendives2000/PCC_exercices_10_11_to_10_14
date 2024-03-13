@@ -13,8 +13,7 @@ import json
 
 # -----------------------------------------------------------------------------
 
-# 1a. Write a program that prompts for the user’s favorite number.
-while True:
+while True:  # 1a.
     print_1 = '\nPress "q" to quit at anytime.'
     favorite_number = input(f"{print_1}\nEnter your favorite number: --> ")
 
@@ -29,11 +28,10 @@ while True:
         print(f"\nThank you!\nThis is your favorite number:\n\t{favorite_number}")
         break
 
-# 1a.1. Use json.dumps() to store this number in a file.
 path = Path(
     "\PYTHON\My_PYTHON_2024\PYTHON_practice\PCC_exercices_10_11_to_10_14\exercise_10_11\json_files/favorite_numbers.json"
 )
 if path.exists():
-    dumpee = json.dumps(favorite_number)
+    dumpee = json.dumps(favorite_number)  # 1a.1.
     path.write_text(dumpee)
     print(f"\nWe saved your favorite number at:\n\t{path}")
